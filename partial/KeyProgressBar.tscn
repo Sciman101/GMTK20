@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/KeyProgressBar.gd" type="Script" id=1]
+[ext_resource path="res://sprites/32x32.png" type="Texture" id=2]
+[ext_resource path="res://sprites/progres.png" type="Texture" id=4]
+
+[node name="ProgressBarLeft" type="TextureProgress"]
+margin_right = 200.0
+margin_bottom = 32.0
+max_value = 1.0
+step = 0.01
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 4 )
+nine_patch_stretch = true
+stretch_margin_left = 6
+stretch_margin_top = 6
+stretch_margin_right = 6
+stretch_margin_bottom = 6
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+keyname = "left"

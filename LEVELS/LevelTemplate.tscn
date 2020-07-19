@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://partial/KeyProgressBar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://partial/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://partial/Goal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://font/611Bit.tres" type="DynamicFont" id=6]
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ProgressBarLeft" parent="UI" instance=ExtResource( 2 )]
+margin_left = 380.0
+margin_top = 80.0
+margin_right = 480.0
+margin_bottom = 112.0
+value = 1.0
+fill_mode = 1
+
+[node name="ProgressBarRight" parent="UI" instance=ExtResource( 2 )]
+margin_left = 544.0
+margin_top = 80.0
+margin_right = 644.0
+margin_bottom = 112.0
+value = 1.0
+keyname = "right"
+
+[node name="ProgressBarJump" parent="UI" instance=ExtResource( 2 )]
+margin_left = 488.0
+margin_top = 40.0
+margin_right = 536.0
+margin_bottom = 112.0
+value = 1.0
+fill_mode = 3
+keyname = "jump"
+
+[node name="Hint" type="Label" parent="UI"]
+margin_left = 16.0
+margin_top = 384.0
+margin_right = 316.0
+margin_bottom = 584.0
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+text = "Put a level hint here"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -1, 1, 0, -65536, 1, 2, -65505, 1, 0, -65504, 1, 2, 65535, 1, 131072, 0, 1, 65537, 1, 1, 196609, 2, 1, 196609, 3, 1, 196609, 4, 1, 196609, 5, 1, 196609, 6, 1, 196609, 7, 1, 196609, 8, 1, 196609, 9, 1, 65537, 10, 1, 1, 11, 1, 1, 12, 1, 1, 13, 1, 1, 14, 1, 65537, 15, 1, 196609, 16, 1, 196609, 17, 1, 65537, 18, 1, 1, 19, 1, 1, 20, 1, 1, 21, 1, 1, 22, 1, 65537, 23, 1, 196609, 24, 1, 196609, 25, 1, 196609, 26, 1, 196609, 27, 1, 196609, 28, 1, 196609, 29, 1, 196609, 30, 1, 196609, 31, 1, 65537, 32, 1, 131074, 65536, 1, 65539, 65545, 1, 65536, 65546, 1, 65537, 65547, 1, 131073, 65548, 1, 131073, 65549, 1, 131073, 65550, 1, 131074, 65553, 1, 131072, 65554, 1, 131073, 65555, 1, 131073, 65556, 1, 131073, 65557, 1, 65537, 65558, 1, 65538, 65567, 1, 65539, 131072, 1, 65539, 131081, 1, 65536, 131082, 1, 65538, 131093, 1, 65536, 131094, 1, 65538, 131103, 1, 65539, 196608, 1, 65539, 196617, 1, 65536, 196618, 1, 65538, 196629, 1, 65536, 196630, 1, 65538, 196639, 1, 65539, 262144, 1, 65539, 262153, 1, 131072, 262154, 1, 65537, 262155, 1, 196609, 262156, 1, 196609, 262157, 1, 196609, 262158, 1, 196609, 262159, 1, 196609, 262160, 1, 196609, 262161, 1, 196609, 262162, 1, 196609, 262163, 1, 196609, 262164, 1, 196609, 262165, 1, 65537, 262166, 1, 131074, 262175, 1, 65539, 327680, 1, 65539, 327711, 1, 65539, 393216, 1, 65539, 393247, 1, 65539, 458752, 1, 65539, 458783, 1, 65539, 524288, 1, 65539, 524319, 1, 65539, 589824, 1, 65539, 589855, 1, 65539, 655360, 1, 65539, 655391, 1, 65539, 720896, 1, 65539, 720927, 1, 65539, 786432, 1, 65539, 786463, 1, 65539, 851968, 1, 65539, 851999, 1, 65539, 917504, 1, 65539, 917535, 1, 65539, 983040, 1, 65539, 983071, 1, 65539, 1048576, 1, 65539, 1048607, 1, 65539, 1114112, 1, 65539, 1114143, 1, 65539, 1245183, 1, 0, 1179648, 1, 65537, 1179649, 1, 196609, 1179650, 1, 196609, 1179651, 1, 196609, 1179652, 1, 196609, 1179653, 1, 196609, 1179654, 1, 196609, 1179655, 1, 196609, 1179656, 1, 196609, 1179657, 1, 196609, 1179658, 1, 196609, 1179659, 1, 196609, 1179660, 1, 196609, 1179661, 1, 196609, 1179662, 1, 196609, 1179663, 1, 196609, 1179664, 1, 196609, 1179665, 1, 196609, 1179666, 1, 196609, 1179667, 1, 196609, 1179668, 1, 196609, 1179669, 1, 196609, 1179670, 1, 196609, 1179671, -1610612735, 196609, 1179672, -1610612735, 196609, 1179673, 1, 196609, 1179674, 1, 196609, 1179675, 1, 196609, 1179676, 1, 196609, 1179677, 1, 196609, 1179678, 1, 196609, 1179679, 1, 65537, 1179680, 1, 2, 1310719, 1, 131072, 1245184, 1, 131074, 1245215, 1, 131072, 1245216, 1, 131074 )
+
+[node name="Pickups" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 928, 552 )
+
+[node name="Goal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 968, 552 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+current = true
+[connection signal="button_timer_value_changed" from="Player" to="UI/ProgressBarJump" method="_on_Player_button_timer_value_changed"]
+[connection signal="button_timer_value_changed" from="Player" to="UI/ProgressBarRight" method="_on_Player_button_timer_value_changed"]
+[connection signal="button_timer_value_changed" from="Player" to="UI/ProgressBarLeft" method="_on_Player_button_timer_value_changed"]
+
+[editable path="UI/ProgressBarLeft"]
+
+[editable path="UI/ProgressBarRight"]
+
+[editable path="UI/ProgressBarJump"]
