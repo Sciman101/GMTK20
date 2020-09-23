@@ -23,6 +23,11 @@ config/icon="res://sprites/player.png"
 
 Transition="*res://partial/Transition.tscn"
 
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
 [input]
 
 ui_left={
@@ -67,6 +72,7 @@ restart={
 
 [rendering]
 
+quality/2d/use_nvidia_rect_flicker_workaround=true
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=0
 environment/default_clear_color=Color( 0.784314, 0.784314, 0.784314, 1 )
